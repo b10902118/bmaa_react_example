@@ -97,85 +97,44 @@ const Header = () => {
                               className="sub-menu"
                               style={{ position: "absolute" }}
                             >
-                              <li
-                                id="menu-item-1078"
-                                className="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"
-                              >
-                                <a
-                                  href="https://bmaa.tw/good-points/"
-                                  className="hfe-sub-menu-item"
+                              {
+                              [
+                                { title: "練習特色", href: "https://bmaa.tw/good-points/" },
+                                { title: "科學證據", href: "https://bmaa.tw/evidence/" },
+                                { title: "採訪報導", href: "https://bmaa.tw/news/" }
+                              ].map((sub, idx) => (
+                                <li
+                                  key={sub.title}
+                                  className="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"
                                 >
-                                  練習特色
-                                </a>
-                              </li>
-                              <li
-                                id="menu-item-147"
-                                className="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"
-                              >
-                                <a
-                                  href="https://bmaa.tw/evidence/"
-                                  className="hfe-sub-menu-item"
-                                >
-                                  科學證據
-                                </a>
-                              </li>
-                              <li
-                                id="menu-item-2042"
-                                className="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"
-                              >
-                                <a
-                                  href="https://bmaa.tw/news/"
-                                  className="hfe-sub-menu-item"
-                                >
-                                  採訪報導
-                                </a>
-                              </li>
+                                  <a
+                                    href={sub.href}
+                                    className="hfe-sub-menu-item"
+                                  >
+                                    {sub.title}
+                                  </a>
+                                </li>
+                              ))}
                             </ul>
                           </li>
-                          <li
-                            id="menu-item-1459"
-                            className="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"
-                          >
-                            <a
-                              href="https://bmaa.tw/className-information/"
-                              className="hfe-menu-item"
+                          {[
+                            { title: "課程介紹", href: "https://bmaa.tw/className-information/" },
+                            { title: "學員心得", href: "https://bmaa.tw/students-feedback/" },
+                            { title: "團隊成員", href: "https://bmaa.tw/members/" },
+                            { title: "聯絡我們", href: "https://bmaa.tw/contact-us/" },
+                          ].map((item, idx) => (
+                            <li
+                              key={item.title}
+                              className="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"
                             >
-                              課程介紹
-                            </a>
-                          </li>
-                          <li
-                            id="menu-item-2966"
-                            className="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"
-                          >
-                            <a
-                              href="https://bmaa.tw/students-feedback/"
-                              className="hfe-menu-item"
-                            >
-                              學員心得
-                            </a>
-                          </li>
-                          <li
-                            id="menu-item-3307"
-                            className="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"
-                          >
-                            <a
-                              href="https://bmaa.tw/members/"
-                              className="hfe-menu-item"
-                            >
-                              團隊成員
-                            </a>
-                          </li>
-                          <li
-                            id="menu-item-69"
-                            className="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"
-                          >
-                            <a
-                              href="https://bmaa.tw/contact-us/"
-                              className="hfe-menu-item"
-                            >
-                              聯絡我們
-                            </a>
-                          </li>
+                              <a
+                                href={item.href}
+                                className="hfe-menu-item"
+                              >
+                                {item.title}
+                              </a>
+                            </li>
+                          ))}
                         </ul>
                       </nav>
                     </div>
